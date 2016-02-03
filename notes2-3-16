@@ -26,3 +26,17 @@ Image File Formats
 		Lossless
 			- contains all the original information
 			- bmp, tiff, png are lossless
+			
+	Raster Vs. Vector
+	
+		Raster
+			- image is represented as a grid of pixels
+			
+		Vector
+			- the image is represented as a list of drawing instructions
+			- scale well
+			
+	netpbm
+		- raster
+		- lossless
+		- uncompressed
