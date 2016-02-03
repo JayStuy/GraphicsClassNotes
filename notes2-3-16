@@ -1,0 +1,28 @@
+Image File Formats
+	Compressed Vs. Uncompressed
+	
+		Compressed
+			- Smaller
+			- often less information
+			Types
+				- png
+				- gif
+				- jpg/jpeg
+			
+		Uncompressed
+			- full map of pixel values
+			Types
+				- bmp
+				- tiff
+				- svg
+				- raw
+				
+	Lossy Vs. Lossless
+	
+		Lossy
+			- Loses some of the original information
+			- jpg is lossy
+			
+		Lossless
+			- contains all the original information
+			- bmp, tiff, png are lossless
