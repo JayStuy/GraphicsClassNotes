@@ -40,3 +40,15 @@ Image File Formats
 		- raster
 		- lossless
 		- uncompressed
+		
+		suffix: .ppm
+		
+		format:
+		
+		P3					|
+		XRES	YRES		| all 3 of these things are header
+		MAX_COLOR_VALUE		|
+		
+		RGB RGB RGB ...
+		
+		all white space is equivalent
