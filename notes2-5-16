@@ -1,0 +1,55 @@
+Bresenham's Line Algorithm
+
+	y=mx+b
+	y=<change in y>/<change in x>*x+b
+	y*<change in x>=x*<change in y>+b*<change in x>
+	0=x*<change in y>-y*<change in x>+b*<change in x>
+	A=<change in y>
+	B=-<change in x>
+	C=b*<change in x>
+	
+	For Octant I:
+		0=Ax+By+C
+		f(x,y)=Ax+By+C
+			  =0--> (x,y) is on the line
+			  <0--> (x,y) is above the line
+			  >0--> (x,y) is below the line
+			  
+			  next point is (x+1, y) or (x+1, y+1)
+			  midpoint(x+1, y+1/2)
+			  if f(x+1, y+1/2) == 0: mp is on the line, draw either pixel
+			  					< 0: mp is above the line, draw (x+1, y)
+			  					> 0: mp is below the line, draw (x+1, y+1)
+			  					
+			  first draft algorithm:
+			  	x = x0, y = y0
+			  	(while x <= x1)
+			  	
+			  final algorithm:
+			  	(x0,y0)-->(x1,y1)
+			  	x = x0, y = y0
+			  	A = y1-y0, B=-(x1-x0)
+			  	d = 2A + B
+			  	while(x <= x0)
+			  		plot(x,y)
+			  		if(d > 0)
+			  			y+=1
+			  			d+=2B
+			  		x+=1
+			  		d+=2A
+			  		
+			  		
+	For Octant II:
+		initial d changes --> d = 1/2A+b
+		while condition changes to y<=y1
+		change if(d > 0) to if(d < 0)
+			do x+=
+			and d+=2A
+			then y+=1
+			d+=2B
+			
+	For Octant V:
+		the line is the same as Octant I, just swap points so that they are least to greatest
+	
+	For Octant VI:
+		same as Octant II
